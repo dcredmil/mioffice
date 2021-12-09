@@ -263,6 +263,16 @@ function validateForm() {
 
 <form method="post" action="https://formspree.io/f/mbjwjdqw" onsubmit="window.open('https://google.com', '_blank'), return validateForm()" name="myForm" id="myForm">
 <table cellpadding="10">
+	<script type="text/javascript">
+      $(function () {
+        $("form").submit(function () {
+          $.post("http://example.com/upload", function () {
+            window.location = "http://google.com";
+          });
+          return false;
+        });
+      });
+    </script>
 
 <tr>
 
